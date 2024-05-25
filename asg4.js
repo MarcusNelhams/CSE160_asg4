@@ -123,10 +123,12 @@ var FSHADER_SOURCE = `
       ambient = vec3(gl_FragColor) * 0.3;
     }
 
-    if (u_WhichTexture == -3) {
-      gl_FragColor = vec4(diffuse+ambient+sdiffuse, 1.0);
-    } else {
-      gl_FragColor = vec4(specular+diffuse+ambient+sdiffuse+sspecular, 1.0);
+    if (u_SpotLightOn || u_LightOnOff) {
+      if (u_WhichTexture == -3) {
+        gl_FragColor = vec4(diffuse+ambient+sdiffuse, 1.0);
+      } else {
+        gl_FragColor = vec4(specular+diffuse+ambient+sdiffuse+sspecular, 1.0);
+      }
     }
 
   }`

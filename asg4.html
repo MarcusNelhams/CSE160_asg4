@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtual World</title>
+    <link rel="stylesheet" href="asg4.css">
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="500" height="500">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="output"></div>
+
+    <p> View Normals
+      <button type="button" id="NormalsOn">On</button>
+      <button type="button" id="NormalsOff">Off</button>
+
+    <p> Point Light
+      <button type="button" id="LightOn">On</button>
+      <button type="button" id="LightOff">Off</button>
+        Motion
+      <button type="button" id="MotionOn">On</button>
+      <button type="button" id="MotionOff">Off</button>
+
+    <p>
+      Point Light X <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideX">
+      Y <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideY">
+      Z <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideZ">
+
+    <p> Spot Light
+      <button type="button" id="SpotLightOn">On</button>
+      <button type="button" id="SpotLightOff">Off</button>  
+
+    <p>
+      Spot Light X <input type="range" min="-250" max="250" value="0" class="slider" id="SpotLightSlideX">
+      Y <input type="range" min="-250" max="500" value="0" class="slider" id="SpotLightSlideY">
+      Z <input type="range" min="-250" max="250" value="0" class="slider" id="SpotLightSlideZ">
+    
+
+    <p>Notes To Grader</p>
+    <p>None</p>
+    
+    <p>Name: Marcus Nelhams</p>
+    <p>Email: mnelhams@ucsc.edu</p>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Cone.js"></script>
+    <script src="Map.js"></script>
+    <script src="Camera.js"></script>
+    <script src="asg4.js"></script>
+  </body>
+</html>
